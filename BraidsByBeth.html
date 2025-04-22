@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Braids by Beth</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #000;
+      margin: 0;
+      padding: 0;
+      color: white;
+    }
+    header {
+      background-color: #111;
+      padding: 30px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 15px;
+    }
+    header img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #ff69b4;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      background: linear-gradient(to right, #ff69b4, #00ffff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: colorchange 5s linear infinite;
+      background-size: 200% auto;
+    }
+    header p {
+      color: white;
+    }
+    @keyframes colorchange {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    h2 {
+      color: #ff69b4;
+      margin-top: 30px;
+    }
+    p, ul {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    .services {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .service {
+      background: #111;
+      border: 2px solid #ff69b4;
+      border-radius: 12px;
+      padding: 15px;
+      font-weight: bold;
+      color: #00ffff;
+      position: relative;
+    }
+    .service-top {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 10px;
+    }
+    .service-top video {
+      width: 120px;
+      height: 120px;
+      border-radius: 8px;
+      object-fit: cover;
+      border: 2px solid #00ffff;
+    }
+    .style-title {
+      font-size: 1.3rem;
+      color: #00ffff;
+    }
+    .price {
+      display: none;
+      color: #ff69b4;
+      margin-top: 10px;
+    }
+    .service:hover .price {
+      display: block;
+    }
+    form {
+      background: #111;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 30px;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      color: white;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ff69b4;
+      border-radius: 6px;
+      background: #000;
+      color: #00ffff;
+    }
+    button {
+      margin-top: 20px;
+      background: #00ffff;
+      color: #000;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button:hover {
+      background: #ff69b4;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="BraidsByBeth.JPEG" alt="Beth profile picture">
+    <h1>Braids by Beth</h1>
+    <p>WELCOME TO MY BOOKING SITE!</p>
+  </header>
+
+  <main>
+    <h2>Disclaimer & Client Agreement</h2>
+    <p>By booking, the client acknowledges that I am not a licensed hairstylist. Upon booking, you agree to receive services at your own risk and understand that I am not liable for any allergic reactions or issues caused by products used during your appointment.</p>
+
+    <h2>Appointment Requests & Hair Drop-Off</h2>
+    <p>Appointments must be requested at least 5 days in advance by texting me directly. Please plan to have the whole day free!</p>
+    <p>Hair must be dropped off at least 1 day before your appointment so I can prep your style in advance.</p>
+
+    <h2>Deposits & Payments</h2>
+    <p>A $15 deposit is required to secure your appointment. Your spot is not confirmed until the deposit is received. The remaining balance is due immediately after the service is completed.</p>
+
+    <h2>Cancellations & Refunds</h2>
+    <p>24-hour notice is required to receive a full deposit refund. Same-day cancellations or no-shows will result in a non-refundable deposit, which goes toward the time spent prepping the hair in advance.</p>
+
+    <h2>How to Prepare</h2>
+    <ul>
+      <li>🧼 <strong>Wash Your Hair:</strong> Hair must be clean and free of heavy product buildup. Leave-in conditioner is okay, but avoid oils, gels, or creams.</li>
+      <li><strong>Detangle Thoroughly:</strong> Detangle from root to tip before coming to save time and ensure a smooth process.</li>
+      <li>💨 <strong>Blow-Dry (Optional):</strong> Blow-drying is available but adds time. Arrive with blow-dried hair if possible.</li>
+      <li>🕒 <strong>Be On Time:</strong> Being prepared helps us start right away and respect both your time and mine.</li>
+    </ul>
+
+    <h2>Services Offered</h2>
+    <div class="services">
+      <div class="service">
+        <div class="service-top">
+          <video src="knotless.mp4" autoplay muted loop></video>
+          <span class="style-title">Knotless Braids</span>
+        </div>
+        <div class="price">
+          Large: $90<br />
+          Medium: $140<br />
+          Small: $160
+        </div>
+      </div>
+      <div class="service">
+        <div class="service-top">
+          <video src="traditional.mp4" autoplay muted loop></video>
+          <span class="style-title">Traditional Braids</span>
+        </div>
+        <div class="price">
+          Large: $100<br />
+          Medium: $130<br />
+          Small: $160
+        </div>
+      </div>
+      <div class="service">
+        <div class="service-top">
+          <video src="boho.mp4" autoplay muted loop></video>
+          <span class="style-title">Boho Braids</span>
+        </div>
+        <div class="price">
+          Medium (w/ curly ends): $170<br />
+          Small (w/ curly ends): $185
+        </div>
+      </div>
+      <div class="service">
+        <div class="service-top">
+          <video src="senagalese.MP4" autoplay muted loop></video>
+          <span class="style-title">Senegalese Twists</span>
+        </div>
+        <div class="price">
+          Large: $80<br />
+          Medium: $120<br />
+          Small: $140
+        </div>
+      </div>
+      <div class="service">
+        <div class="service-top">
+          <video src="passion.mp4" autoplay muted loop></video>
+          <span class="style-title">Passion Twists</span>
+        </div>
+        <div class="price">
+          Large: $80<br />
+          Medium: $120<br />
+          Small: $140
+        </div>
+      </div>
+      <div class="service">
+        <div class="service-top">
+          <video src="natural.mp4" autoplay muted loop></video>
+          <span class="style-title">Natural Services</span>
+        </div>
+        <div class="price">
+          Two-Strand Twists (natural hair): $60<br />
+          Parting Only: $30
+        </div>
+      </div>
+    </div>
+
+    <h2>Book an Appointment</h2>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" required />
+
+      <label for="style">Style:</label>
+      <select id="style" name="style">
+        <option>Knotless Braids</option>
+        <option>Traditional Braids</option>
+        <option>Boho Braids</option>
+        <option>Senegalese Twists</option>
+        <option>Passion Twists</option>
+        <option>Natural Services</option>
+      </select>
+
+      <label for="size">Size:</label>
+      <select id="size" name="size">
+        <option>Large</option>
+        <option>Medium</option>
+        <option>Small</option>
+        <option>Natural/Not Applicable</option>
+      </select>
+
+      <label for="date">Preferred Date:</label>
+      <input type="date" id="date" name="date" required />
+
+      <label for="message">Additional Notes:</label>
+      <textarea id="message" name="message" rows="4"></textarea>
+
+      <button type="submit">Submit Request</button>
+    </form>
+  </main>
+</body>
+</html>
