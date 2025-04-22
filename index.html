@@ -139,11 +139,45 @@
       background: #ff69b4;
       color: #000;
     }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    .checkbox-group {
+      display: flex;
+      align-items: center;
+      margin-top: 5px;
+    }
+    .checkbox-group input {
+      width: auto;
+      margin-right: 8px;
+    }
+    .radio-group {
+      margin-top: 5px;
+    }
+    .radio-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 5px;
+    }
+    .radio-item input {
+      width: auto;
+      margin-right: 8px;
+    }
+    .success-message {
+      background: rgba(0, 255, 0, 0.2);
+      border: 1px solid #00ff00;
+      color: #00ff00;
+      padding: 10px;
+      border-radius: 6px;
+      margin-top: 20px;
+      text-align: center;
+      display: none;
+    }
   </style>
 </head>
 <body>
   <header>
-    <img src="BraidsByBeth.JPEG" alt="Beth profile picture">
+    <img src="/api/placeholder/100/100" alt="Beth profile picture">
     <h1>Braids by Beth</h1>
     <p>WELCOME TO MY BOOKING SITE!</p>
   </header>
@@ -174,7 +208,7 @@
     <div class="services">
       <div class="service">
         <div class="service-top">
-          <video src="knotless.mp4" autoplay muted loop></video>
+          <video src="/api/placeholder/120/120" autoplay muted loop></video>
           <span class="style-title">Knotless Braids</span>
         </div>
         <div class="price">
@@ -185,7 +219,7 @@
       </div>
       <div class="service">
         <div class="service-top">
-          <video src="traditional.mp4" autoplay muted loop></video>
+          <video src="/api/placeholder/120/120" autoplay muted loop></video>
           <span class="style-title">Traditional Braids</span>
         </div>
         <div class="price">
@@ -196,7 +230,7 @@
       </div>
       <div class="service">
         <div class="service-top">
-          <video src="boho.mp4" autoplay muted loop></video>
+          <video src="/api/placeholder/120/120" autoplay muted loop></video>
           <span class="style-title">Boho Braids</span>
         </div>
         <div class="price">
@@ -206,7 +240,7 @@
       </div>
       <div class="service">
         <div class="service-top">
-          <video src="senagalese.MP4" autoplay muted loop></video>
+          <video src="/api/placeholder/120/120" autoplay muted loop></video>
           <span class="style-title">Senegalese Twists</span>
         </div>
         <div class="price">
@@ -217,7 +251,7 @@
       </div>
       <div class="service">
         <div class="service-top">
-          <video src="passion.mp4" autoplay muted loop></video>
+          <video src="/api/placeholder/120/120" autoplay muted loop></video>
           <span class="style-title">Passion Twists</span>
         </div>
         <div class="price">
@@ -228,7 +262,7 @@
       </div>
       <div class="service">
         <div class="service-top">
-          <video src="natural.mp4" autoplay muted loop></video>
+          <video src="/api/placeholder/120/120" autoplay muted loop></video>
           <span class="style-title">Natural Services</span>
         </div>
         <div class="price">
@@ -239,9 +273,153 @@
     </div>
 
     <h2>Book an Appointment</h2>
+    
+    <form id="bookingForm" action="https://docs.google.com/forms/d/e/1FAIpQLSct3C68OrkveVISw7wWmNdxNuwQqo4bvk2sLUPfnlO5WA-SqQ/formResponse" method="post" target="hidden_iframe">
+      <div class="form-group">
+        <label for="entry.2005620554">Email Address*</label>
+        <input type="email" id="entry.2005620554" name="entry.2005620554" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="entry.1045781291">Full Name*</label>
+        <input type="text" id="entry.1045781291" name="entry.1045781291" required>
+      </div>
 
-    <!-- Google Form embedded here -->
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSct3C68OrkveVISw7wWmNdxNuwQqo4bvk2sLUPfnlO5WA-SqQ/viewform?embedded=true" width="640" height="1813" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+      <div class="form-group">
+        <label for="entry.1066974658">Phone Number*</label>
+        <input type="tel" id="entry.1066974658" name="entry.1066974658" required>
+      </div>
+
+      <div class="form-group">
+        <label>Have you read all policies and procedures?*</label>
+        <div class="radio-group">
+          <div class="radio-item">
+            <input type="radio" id="policies-yes" name="entry.1484766043" value="Yes" required>
+            <label for="policies-yes">Yes</label>
+          </div>
+          <div class="radio-item">
+            <input type="radio" id="policies-no" name="entry.1484766043" value="No">
+            <label for="policies-no">No</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="entry.1258192436">What Service Are You Requesting?*</label>
+        <select id="entry.1258192436" name="entry.1258192436" required>
+          <option value="">Select a service</option>
+          <option value="Knotless Braids">Knotless Braids</option>
+          <option value="Traditional Braids">Traditional Braids</option>
+          <option value="Boho Braids">Boho Braids</option>
+          <option value="Senegalese Twists">Senegalese Twists</option>
+          <option value="Passion Twists">Passion Twists</option>
+          <option value="Two-Strand Twists (natural hair)">Two-Strand Twists (natural hair)</option>
+          <option value="Parting Only">Parting Only</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="entry.1521761225">Size Preference*</label>
+        <select id="entry.1521761225" name="entry.1521761225" required>
+          <option value="">Select a size</option>
+          <option value="Large">Large</option>
+          <option value="Medium">Medium</option>
+          <option value="Small">Small</option>
+          <option value="N/A">N/A</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="entry.1667522812">Please list your top 3 date preferences with day of week included.*</label>
+        <textarea id="entry.1667522812" name="entry.1667522812" rows="3" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="entry.2053889081">What is your natural hair length?*</label>
+        <select id="entry.2053889081" name="entry.2053889081" required>
+          <option value="">Select hair length</option>
+          <option value="TWA">TWA</option>
+          <option value="Short (shoulder length or less)">Short (shoulder length or less)</option>
+          <option value="Medium (past shoulders, above mid-back)">Medium (past shoulders, above mid-back)</option>
+          <option value="Long (past mid-back)">Long (past mid-back)</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="entry.1334640116">Hair Texture/Type?*</label>
+        <select id="entry.1334640116" name="entry.1334640116" required>
+          <option value="">Select hair texture</option>
+          <option value="Straight">Straight</option>
+          <option value="Wavy">Wavy</option>
+          <option value="Curly">Curly</option>
+          <option value="Coily/Kinky">Coily/Kinky</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="entry.1349808672">Hair Density/Thickness?*</label>
+        <select id="entry.1349808672" name="entry.1349808672" required>
+          <option value="">Select hair density</option>
+          <option value="Fine (thin strands)">Fine (thin strands)</option>
+          <option value="Medium">Medium</option>
+          <option value="Coarse (thick strands)">Coarse (thick strands)</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Do you want extensions?*</label>
+        <div class="radio-group">
+          <div class="radio-item">
+            <input type="radio" id="extensions-yes" name="entry.1216569531" value="Yes" required>
+            <label for="extensions-yes">Yes</label>
+          </div>
+          <div class="radio-item">
+            <input type="radio" id="extensions-no" name="entry.1216569531" value="No">
+            <label for="extensions-no">No</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="entry.1651499281">Additional requests/notes for your appointment (e.g., hair color, length, style inspiration)</label>
+        <textarea id="entry.1651499281" name="entry.1651499281" rows="4"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="entry.1334797535">How did you hear about me?*</label>
+        <select id="entry.1334797535" name="entry.1334797535" required>
+          <option value="">Select an option</option>
+          <option value="Instagram">Instagram</option>
+          <option value="TikTok">TikTok</option>
+          <option value="Friend/Family">Friend/Family</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <div class="checkbox-group">
+          <input type="checkbox" id="entry.1066559308" name="entry.1066559308" value="Agreed" required>
+          <label for="entry.1066559308">I acknowledge and agree to all policies mentioned above*</label>
+        </div>
+      </div>
+
+      <button type="submit">Submit Booking Request</button>
+      <div id="successMessage" class="success-message">Thank you for your booking request! I'll be in touch soon.</div>
+    </form>
+
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
   </main>
+
+  <script>
+    document.getElementById('bookingForm').addEventListener('submit', function(e) {
+      // Form will still submit through the hidden iframe
+      setTimeout(function() {
+        document.getElementById('successMessage').style.display = 'block';
+        document.getElementById('bookingForm').reset();
+        // Scroll to success message
+        document.getElementById('successMessage').scrollIntoView({behavior: 'smooth'});
+      }, 1000);
+    });
+  </script>
 </body>
 </html>
